@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="bg-primary">
         <q-btn
           flat
           dense
@@ -11,11 +11,21 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Quasar App
+        <q-toolbar-title class="bg-primary">
+          e-Manga
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <div>
+          <q-btn flat color="white" label="Entrar/Cadastrar"
+          size="13px"
+          />
+        </div>
+        <div>
+          <q-btn round>
+            <q-avatar size="42px">
+              <img src="public/avatar.png">
+            </q-avatar>
+          </q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -28,7 +38,7 @@
         <q-item-label
           header
         >
-          Essential Links
+        Opções
         </q-item-label>
 
         <EssentialLink
@@ -38,10 +48,14 @@
         />
       </q-list>
     </q-drawer>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
+    <div class="q-pa-md">
+      <q-page-container>
+        <q-img src="https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2020/08/manga-o-que-e-historia-principais-caracteristicas-e-tipos-1024x576.png"
+        alt="asuna"
+        style="height: 300px; width: 300px"
+        />
+      </q-page-container>
+    </div>
   </q-layout>
 </template>
 
@@ -51,44 +65,37 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Início',
     icon: 'school',
     link: 'https://quasar.dev'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Pedidos',
     icon: 'code',
     link: 'https://github.com/quasarframework'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
+    title: 'Criar anúncio',
     icon: 'chat',
     link: 'https://chat.quasar.dev'
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
+    title: 'Minhas vendas',
     icon: 'record_voice_over',
     link: 'https://forum.quasar.dev'
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
+    title: 'Meus produtos',
     icon: 'rss_feed',
     link: 'https://twitter.quasar.dev'
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
+    title: 'Carrinho',
     icon: 'public',
     link: 'https://facebook.quasar.dev'
   },
   {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
+    title: 'Meu perfil',
     icon: 'favorite',
     link: 'https://awesome.quasar.dev'
   }
