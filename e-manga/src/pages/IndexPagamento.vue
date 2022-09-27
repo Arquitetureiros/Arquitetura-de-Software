@@ -37,7 +37,87 @@
         <div class="q-pa-md">
           Quantidade de itens: {{nrItens}}
         </div>
-      </div>
+
+        <div class="column">
+          <div class="col">
+            <q-checkbox v-model="val"/>
+              <q-img
+              :src="img"
+              style="height: 200px; max-width: 150px"
+              >
+              <div class="absolute-bottom text-subtitle1 text-center"> Vol. 1 </div>
+              </q-img>
+            <div class="row q-pa-md">
+              <div>
+                <span class="text-h6">{{item}}</span>
+                <p class="text-subtitle1" style="opacity: 0.7"> Vendido por: {{ vendedor }}</p>
+              </div>
+            </div>
+          </div>
+            <div class="col">
+              <div class="row">
+                <div class="col-md-4">
+                  <q-input
+                  v-model.number="qtd"
+                  dense
+                  type="number"
+                  outlined
+                  style="max-width: 200px; max-height: 10px"
+                  label="Quantidade:"
+                  />
+                </div>
+                <div>
+                  <span>Valor unitário: </span>
+                  <span class="text-positive">R${{valor}}</span><br>
+                  <span>Valor total: </span>
+                  <span class="text-positive">R${{valor*qtd}}</span>
+                </div>
+                <div>
+                  <q-btn
+                  flat
+                  round
+                  icon="fas fa-trash"
+                  color="primary">
+                  <q-tooltip class="bg-primary">Excluir item</q-tooltip>
+                  </q-btn>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="q-pt-xl">
+            <span class="text-h5"> Forma de Pagamento:</span>
+            <div class="row">
+              <q-tabs
+              v-model="tab"
+              class="text-primary"
+              >
+              <q-tab name="card" icon="fa-solid fa-credit-card" label="Cartão" />
+              <q-tab name="boleto" icon="fa-solid fa-barcode" label="Boleto" />
+              <q-tab name="pix" icon="fa-solid fa-qrcode" label="Pix" />
+              </q-tabs>
+            </div>
+              <div v-if="tab == 'pix'">
+                <div class="text-h6">
+                  Pix
+                </div>
+                <div class="q-pr-xs">
+                  <q-img src="public/qrcode_pix.png" style="height: 250px; width: 250px;"/>
+                </div>
+                <span>Escaneie o QR Code para realizar o pagamento</span>
+              </div>
+              <div v-if="tab == 'card'">
+                <div class="text-h6">
+                  Cartão
+                </div>
+              </div>
+              <div v-if="tab == 'boleto'">
+                <div class="text-h6">
+                  Boleto
+                </div>
+              </div>
+          </div>
     </q-page-container>
 
     <q-drawer
@@ -120,6 +200,13 @@ export default defineComponent({
   setup () {
     const leftDrawerOpen = ref(false)
     const nrItens = ref(1)
+    const img = ref('https://images-na.ssl-images-amazon.com/images/I/71bELfIWTDL.jpg')
+    const item = ref('My Hero Academia Vol. 1')
+    const val = ref(true)
+    const vendedor = ref('Valentas Mangas Express')
+    const qtd = ref(1)
+    const valor = ref(14.90)
+    const tab = ref('card')
 
     return {
       essentialLinks: linksList,
@@ -127,7 +214,14 @@ export default defineComponent({
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
       },
-      nrItens
+      nrItens,
+      img,
+      item,
+      val,
+      vendedor,
+      qtd,
+      valor,
+      tab
     }
   }
 })
