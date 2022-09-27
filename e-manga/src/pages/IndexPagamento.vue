@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title class="bg-primary">
-          e-Manga
+          Pagamento
         </q-toolbar-title>
         <div>
           <q-btn flat color="white" label="Entrar/Cadastrar"
@@ -28,6 +28,17 @@
         </div>
       </q-toolbar>
     </q-header>
+
+    <q-page-container>
+      <div class="q-pa-md">
+        <div class="text-h4">
+          Meu carrinho
+        </div>
+        <div class="q-pa-md">
+          Quantidade de itens: {{nrItens}}
+        </div>
+      </div>
+    </q-page-container>
 
     <q-drawer
       v-model="leftDrawerOpen"
@@ -49,14 +60,6 @@
 
       </q-list>
     </q-drawer>
-    <div class="q-pa-md">
-      <q-page-container>
-        <q-img src="https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2020/08/manga-o-que-e-historia-principais-caracteristicas-e-tipos-1024x576.png"
-        alt="carequinha"
-        style="height: 300px; width: 300px"
-        />
-      </q-page-container>
-    </div>
   </q-layout>
 </template>
 
@@ -116,13 +119,15 @@ export default defineComponent({
 
   setup () {
     const leftDrawerOpen = ref(false)
+    const nrItens = ref(1)
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      },
+      nrItens
     }
   }
 })
