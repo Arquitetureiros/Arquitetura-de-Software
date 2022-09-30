@@ -30,7 +30,14 @@
     </q-header>
 
     <q-page-container>
-      <div class="q-pa-md">
+      <div>
+      <div
+      style="
+      width: 700px;
+      margin: auto;
+      display: inline-block;"
+      class="justify-center"
+      >
         <div class="text-h4">
           Meu carrinho
         </div>
@@ -38,8 +45,8 @@
           Quantidade de itens: {{nrItens}}
         </div>
 
-        <div class="column">
-          <div class="col">
+        <div>
+          <div class="row">
             <q-checkbox v-model="val"/>
               <q-img
               :src="img"
@@ -47,46 +54,41 @@
               >
               <div class="absolute-bottom text-subtitle1 text-center"> Vol. 1 </div>
               </q-img>
-            <div class="row q-pa-md">
-              <div>
+              <div class="q-pl-md">
                 <span class="text-h6">{{item}}</span>
                 <p class="text-subtitle1" style="opacity: 0.7"> Vendido por: {{ vendedor }}</p>
+                <div class="row q-pt-xl">
+                  <div class="col">
+                    <q-input
+                    v-model.number="qtd"
+                    dense
+                    type="number"
+                    outlined
+                    style="max-width: 200px; max-height: 10px"
+                    label="Quantidade:"
+                    />
+                  </div>
+                  <div class ="row q-pl-md">
+                    <div>
+                      <span>Valor unitário: </span>
+                      <span class="text-positive">R${{valor}}</span><br>
+                      <span>Valor total: </span>
+                      <span class="text-positive">R${{valor*qtd}}</span>
+                    </div>
+                    <div>
+                      <q-btn
+                      flat
+                      round
+                      icon="fas fa-trash"
+                      color="primary">
+                      <q-tooltip class="bg-primary">Excluir item</q-tooltip>
+                      </q-btn>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
-            <div class="col">
-              <div class="row">
-                <div class="col-md-4">
-                  <q-input
-                  v-model.number="qtd"
-                  dense
-                  type="number"
-                  outlined
-                  style="max-width: 200px; max-height: 10px"
-                  label="Quantidade:"
-                  />
-                </div>
-                <div>
-                  <span>Valor unitário: </span>
-                  <span class="text-positive">R${{valor}}</span><br>
-                  <span>Valor total: </span>
-                  <span class="text-positive">R${{valor*qtd}}</span>
-                </div>
-                <div>
-                  <q-btn
-                  flat
-                  round
-                  icon="fas fa-trash"
-                  color="primary">
-                  <q-tooltip class="bg-primary">Excluir item</q-tooltip>
-                  </q-btn>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-          <div class="q-pt-xl">
+            <div class="q-pa-xl">
             <span class="text-h5"> Forma de Pagamento:</span>
             <div class="row">
               <q-tabs
@@ -118,6 +120,28 @@
                 </div>
               </div>
           </div>
+          </div>
+        </div>
+        <div
+        style="
+        margin: auto;
+        display: inline-block;">
+          <div class="text-h6">Endereço de Envio:
+                <q-card class="my-card">
+                    <q-card-section class="text-body1">
+                      Rua dos Bobos, 0, Formiga - Minas Gerais<br>
+                      CEP 42069-123
+                    </q-card-section>
+                </q-card>
+              </div>
+          <div class="q-pt-md">
+            <p class="text-h6">Opções de Frete:</p>
+            <q-radio v-model="opFrete" val=8.00 label="PAC" color="green" /> <span class="text-positive">- R$8,00</span><br>
+            <q-radio v-model="opFrete" val=18.00 label="SEDEX" color="green" /> <span class="text-positive">- R$18,00</span>
+          </div>
+          <div class="text-h6">Total: <span class="text-positive">R$ {{total()}}</span></div>
+        </div>
+      </div>
     </q-page-container>
 
     <q-drawer
@@ -207,6 +231,12 @@ export default defineComponent({
     const qtd = ref(1)
     const valor = ref(14.90)
     const tab = ref('card')
+    const opFrete = ref(0)
+
+    function total () {
+      const vltotal = (valor.value + parseFloat(opFrete.value))
+      return vltotal
+    }
 
     return {
       essentialLinks: linksList,
@@ -221,7 +251,9 @@ export default defineComponent({
       vendedor,
       qtd,
       valor,
-      tab
+      tab,
+      opFrete,
+      total
     }
   }
 })
