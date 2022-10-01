@@ -30,14 +30,8 @@
     </q-header>
 
     <q-page-container>
+      <div class="q-pa-xl">
       <div>
-      <div
-      style="
-      width: 700px;
-      margin: auto;
-      display: inline-block;"
-      class="justify-center"
-      >
         <div class="text-h4">
           Meu carrinho
         </div>
@@ -46,14 +40,17 @@
         </div>
 
         <div>
-          <div class="row">
+          <div class="row justify-between">
+            <div class="row">
+            <div>
             <q-checkbox v-model="val"/>
               <q-img
               :src="img"
-              style="height: 200px; max-width: 150px"
+              style="height: 200px; width: 150px"
               >
               <div class="absolute-bottom text-subtitle1 text-center"> Vol. 1 </div>
               </q-img>
+              </div>
               <div class="q-pl-md">
                 <span class="text-h6">{{item}}</span>
                 <p class="text-subtitle1" style="opacity: 0.7"> Vendido por: {{ vendedor }}</p>
@@ -87,8 +84,25 @@
                   </div>
                 </div>
               </div>
+              </div>
+              <div class="q-pl-xl">
+                <div class="text-h6">Endereço de Envio:
+                <q-card class="my-card">
+                    <q-card-section class="text-body1">
+                      Rua dos Bobos, 0, Formiga - Minas Gerais<br>
+                      CEP 42069-123
+                    </q-card-section>
+                </q-card>
+              </div>
+          <div class="q-pt-md">
+            <p class="text-h6">Opções de Frete:</p>
+            <q-radio v-model="opFrete" val=8.00 label="PAC" color="green" /> <span class="text-positive">- R$8,00</span><br>
+            <q-radio v-model="opFrete" val=18.00 label="SEDEX" color="green" /> <span class="text-positive">- R$18,00</span>
           </div>
-            <div class="q-pa-xl">
+          <div class="text-h6">Total: <span class="text-positive">R$ {{total()}}</span></div>
+        </div>
+          </div>
+            <div class="q-pa-md">
             <span class="text-h5"> Forma de Pagamento:</span>
             <div class="row">
               <q-tabs
@@ -121,25 +135,6 @@
               </div>
           </div>
           </div>
-        </div>
-        <div
-        style="
-        margin: auto;
-        display: inline-block;">
-          <div class="text-h6">Endereço de Envio:
-                <q-card class="my-card">
-                    <q-card-section class="text-body1">
-                      Rua dos Bobos, 0, Formiga - Minas Gerais<br>
-                      CEP 42069-123
-                    </q-card-section>
-                </q-card>
-              </div>
-          <div class="q-pt-md">
-            <p class="text-h6">Opções de Frete:</p>
-            <q-radio v-model="opFrete" val=8.00 label="PAC" color="green" /> <span class="text-positive">- R$8,00</span><br>
-            <q-radio v-model="opFrete" val=18.00 label="SEDEX" color="green" /> <span class="text-positive">- R$18,00</span>
-          </div>
-          <div class="text-h6">Total: <span class="text-positive">R$ {{total()}}</span></div>
         </div>
       </div>
     </q-page-container>
