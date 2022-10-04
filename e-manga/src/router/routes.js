@@ -17,6 +17,10 @@ const routes = [
   {
     path: '/pagamentos',
     component: () => import('pages/IndexPagamento.vue')
+  },
+  {
+    path: '/login',
+    component: () => import('pages/logarSistema.vue')
   }
 ]
 
