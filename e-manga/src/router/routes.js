@@ -19,8 +19,12 @@ const routes = [
     component: () => import('pages/IndexPagamento.vue')
   },
   {
+    path: '/login',
+    component: () => import('pages/logarSistema.vue')
+
     path: '/manterManga',
     component: () => import('pages/ManterManga.vue')
+
   }
 ]
 
