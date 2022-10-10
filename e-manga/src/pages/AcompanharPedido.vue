@@ -30,7 +30,43 @@
     </q-header>
 
     <q-page-container>
-      <q-btn color="white" text-color="black" label="Standard" />
+      <h4>Meus pedidos</h4>
+      <q-card class="my-card">
+        <q-card-section>
+          <div class="row justify-between">
+            <div class="row">
+              <img src="public/hunterxhunter.jpg" style="height: 140px; max-width: 150px;">
+              <div>
+                <h6>Hunter x Hunter vol. 1</h6>
+                <p>Vendido por Yuripa Mangás</p>
+                <p>Produto entregue em 09/10/2022</p>
+              </div>
+            </div>
+            <div>
+              <h6>Avaliar Vendedor</h6>
+              <q-rating size="2rem" v-model="ratingModel" :max="5" color="yellow" />
+            </div>
+          </div>
+        </q-card-section>
+      </q-card>
+      <q-card class="my-card">
+        <q-card-section>
+          <div class="row justify-between">
+            <div class="row">
+              <img src="public/jujutsu-kaisen.jpg" style="height: 140px; max-width: 150px;">
+              <div>
+                <h6>Jujutsu Kaisen vol. 1</h6>
+                <p>Vendido por Yuripa Mangás</p>
+                <p>Pedido em trânsito</p>
+              </div>
+            </div>
+            <div>
+              <h6>Avaliar Vendedor</h6>
+              <p>Avaliação disponível após a entrega.</p>
+            </div>
+          </div>
+        </q-card-section>
+      </q-card>
     </q-page-container>
 
     <q-drawer
