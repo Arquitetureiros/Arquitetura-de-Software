@@ -21,10 +21,6 @@ const routes = [
   {
     path: '/login',
     component: () => import('pages/logarSistema.vue')
-  },
-  {
-    path: '/busca',
-    component: () => import('pages/BuscaProduto.vue')
   }
 ]
 
