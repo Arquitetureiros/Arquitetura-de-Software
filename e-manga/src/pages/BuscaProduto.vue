@@ -32,10 +32,10 @@
     <q-page-container>
       <div class="q-pa-md" style="display: grid; justify-content: center; padding-top:100px;">
         <div class="q-gutter-y-md column" style="max-width: 300px">
-          Busca por um produto
-          <q-input outlined v-model="busca" />
+          Resultado de "One Piece"
+          <q-input  outlined v-model="text" label="Pesquisar mangá..." />
           <div >
-            <q-btn color="primary" icon-right="search" label="Pesquisar" />
+            <q-btn color="primary"  label="Pesquisar" />
           </div>
         </div>
       </div>

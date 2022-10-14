@@ -21,6 +21,10 @@ const routes = [
   {
     path: '/login',
     component: () => import('pages/logarSistema.vue')
+  },
+  {
+    path: '/buscar',
+    component: () => import('pages/BuscaProduto.vue')
   }
 ]
 
