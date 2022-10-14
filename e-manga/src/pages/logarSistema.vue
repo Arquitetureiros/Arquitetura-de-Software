@@ -31,7 +31,7 @@
 
     <q-page-container>
      <!--Página aqui-->
-      <div class="q-pa-md">
+      <div class="q-pa-md" style="display: grid; justify-content: center; padding-top:100px;" >
         <div class="q-gutter-y-md column" style="max-width: 300px">
           Cadastre-se
           <form @submit.prevent.stop="onSubmit" @reset.prevent.stop="onReset" class="q-gutter-md">
