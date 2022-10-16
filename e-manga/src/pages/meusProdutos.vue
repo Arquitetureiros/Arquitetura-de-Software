@@ -103,42 +103,27 @@ const linksList = [
   {
     title: 'Início',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '#'
   },
   {
-    title: 'Pedidos',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Criar anúncio',
+    title: 'Criar Anuncio',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '#/manterManga'
   },
   {
-    title: 'Minhas vendas',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Meus produtos',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Carrinho',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Meu perfil',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  },
-  {
-    title: 'Pagamentos',
+    title: 'Carrinho/Pagamento',
     icon: 'receipt',
-    link: 'localhost:9000/#/'
+    link: '#/pagamentos'
+  },
+  {
+    title: 'Meus Pedidos',
+    icon: 'record_voice_over',
+    link: '#/acompanharpedido'
+  },
+  {
+    title: 'Meus Produtos',
+    icon: 'favorite',
+    link: '#/meusProdutos'
   }
 ]
 
