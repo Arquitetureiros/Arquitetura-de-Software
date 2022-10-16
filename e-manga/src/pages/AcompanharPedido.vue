@@ -128,6 +128,11 @@ const linksList = [
     title: 'Meus Pedidos',
     icon: 'record_voice_over',
     link: '#/acompanharpedido'
+  },
+  {
+    title: 'Meus Produtos',
+    icon: 'favorite',
+    link: '#/meusProdutos'
   }
 ]
 
