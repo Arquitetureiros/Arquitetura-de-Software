@@ -15,14 +15,14 @@
           e-Manga
         </q-toolbar-title>
         <div>
-          <q-btn flat color="white" label="Entrar/Cadastrar"
+          <q-btn to="/login" flat color="white" label="Entrar/Cadastrar"
           size="13px"
           />
         </div>
         <div>
           <q-btn round>
             <q-avatar size="42px">
-              <img src="public/avatar.png">
+              <img src="public/blankicon.jpeg">
             </q-avatar>
           </q-btn>
         </div>
@@ -53,7 +53,7 @@
       <q-page-container>
         <q-img src="https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2020/08/manga-o-que-e-historia-principais-caracteristicas-e-tipos-1024x576.png"
         alt="carequinha"
-        style="height: 300px; width: 300px"
+        style="height: 400px; width: 400px"
         />
       </q-page-container>
     </div>
@@ -68,42 +68,17 @@ const linksList = [
   {
     title: 'Início',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '#'
   },
   {
-    title: 'Pedidos',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Criar anúncio',
+    title: 'Criar Anuncio',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '#/manterManga'
   },
   {
-    title: 'Minhas vendas',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Meus produtos',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Carrinho',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Meu perfil',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  },
-  {
-    title: 'Pagamentos',
+    title: 'Carrinho/Pagamento',
     icon: 'receipt',
-    link: 'localhost:9000/#/'
+    link: '#/pagamentos'
   }
 ]
 
