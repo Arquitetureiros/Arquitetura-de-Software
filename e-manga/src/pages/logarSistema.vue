@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title class="bg-primary">
-          Pagamento
+          Cadastro
         </q-toolbar-title>
         <div>
           <q-btn flat color="white" label="Entrar/Cadastrar"
@@ -22,7 +22,7 @@
         <div>
           <q-btn round>
             <q-avatar size="42px">
-              <img src="public/avatar.png">
+              <img src="public/blankicon.jpeg">
             </q-avatar>
           </q-btn>
         </div>
@@ -33,7 +33,9 @@
      <!--Página aqui-->
       <div class="q-pa-md">
         <div class="q-gutter-y-md column" style="max-width: 300px">
-          Cadastre-se
+
+          <span class="text-h5">Cadastre-se</span>
+
           <form @submit.prevent.stop="onSubmit" @reset.prevent.stop="onReset" class="q-gutter-md">
 
             <q-input ref="nameRef" outlined v-model="name" label="Nome *" :dense="dense" lazy-rules :rules="nameRules" />
@@ -87,42 +89,17 @@ const linksList = [
   {
     title: 'Início',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '#'
   },
   {
-    title: 'Pedidos',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Criar anúncio',
+    title: 'Criar Anuncio',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '#/manterManga'
   },
   {
-    title: 'Minhas vendas',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Meus produtos',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Carrinho',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Meu perfil',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  },
-  {
-    title: 'Pagamentos',
+    title: 'Carrinho/Pagamento',
     icon: 'receipt',
-    link: 'localhost:9000/#/'
+    link: '#/pagamentos'
   }
 ]
 
