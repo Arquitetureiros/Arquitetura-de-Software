@@ -79,6 +79,11 @@ const linksList = [
     title: 'Carrinho/Pagamento',
     icon: 'receipt',
     link: '#/pagamentos'
+  },
+  {
+    title: 'Meus Pedidos',
+    icon: 'record_voice_over',
+    link: '#/acompanharpedido'
   }
 ]
 
