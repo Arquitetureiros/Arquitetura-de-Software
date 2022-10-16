@@ -30,12 +30,12 @@
     </q-header>
 
     <q-page-container class="flex justify-center">
-      <div class="flex column justify-center" style="width: 60%; text-align: center;">
+      <div class="flex column justify-center" style="width: 40%; text-align: center;">
         <h4>Editar Perfil</h4>
         <div>
           <p>Imagem de perfil:</p>
           <q-img
-            src="https://placeimg.com/500/300/nature"
+            src="avatar.png"
             spinner-color="white"
             height="140px"
             style="max-width: 150px"
@@ -43,22 +43,28 @@
         </div>
         <div>
           <q-input outlined label="Nome" class="q-pa-md"/>
-          <div>
-            <q-input outlined label="Cep" class="q-pa-md" />
+          <div class="flex">
+            <q-input outlined label="Cep" class="q-pa-md" style="width: 70%;"/>
 
-            <q-input outlined label="Numero" class="q-pa-md"/>
+            <q-input outlined label="Numero" class="q-pa-md" style="width: 30%;"/>
           </div>
           <q-input outlined label="Logradouro" class="q-pa-md"/>
-          <div>
-            <q-input outlined label="Cidade" class="q-pa-md"/>
-            <q-input outlined label="UF" class="q-pa-md"/>
+          <div class="flex">
+            <q-input outlined label="Cidade" class="q-pa-md" style="width: 70%;"/>
+            <q-input outlined label="UF" class="q-pa-md" style="width: 30%;"/>
           </div>
 
-          <q-card>
-            Meus cartões
+          <q-card class="q-pa-sm">
+            <p>Meus cartões</p>
+            <q-card-section>
+              <div>Master Card *******</div>
+            </q-card-section>
+            <q-card-section>
+              <div>Cielo *******</div>
+            </q-card-section>
           </q-card>
 
-          <q-btn>
+          <q-btn style="width: 100%; background-color: green; color: white; margin: 1.5rem 0;" class="q-pa-sm">
             Salvar Alterações
           </q-btn>
         </div>
