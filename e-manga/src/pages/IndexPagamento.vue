@@ -91,6 +91,9 @@
                     <q-card-section class="text-body1">
                       Rua dos Bobos, 0, Formiga - Minas Gerais<br>
                       CEP 42069-123
+                      <q-btn flat dense color="primary" icon="edit">
+                        <q-tooltip>Editar</q-tooltip>
+                      </q-btn>
                     </q-card-section>
                 </q-card>
               </div>
