@@ -25,6 +25,10 @@ const routes = [
   {
     path: '/acompanharpedido',
     component: () => import('pages/AcompanharPedido.vue')
+  },
+  {
+    path: '/editarperfil',
+    component: () => import('pages/EditarPerfil.vue')
   }
 ]
 
