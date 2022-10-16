@@ -27,6 +27,10 @@ const routes = [
     component: () => import('pages/ManterManga.vue')
   },
   {
+    path: '/meusProdutos',
+    component: () => import('pages/meusProdutos.vue')
+  },
+  {
     path: '/acompanharpedido',
     component: () => import('pages/AcompanharPedido.vue')
   }
