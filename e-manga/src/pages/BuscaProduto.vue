@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title class="bg-primary">
-          Pagamento
+          e-Mangá
         </q-toolbar-title>
         <div>
           <q-btn flat color="white" label="Entrar/Cadastrar"
@@ -30,15 +30,191 @@
     </q-header>
 
     <q-page-container>
-      <div class="q-pa-md" style="display: grid; justify-content: center; padding-top:100px;">
-        <div class="q-gutter-y-md column" style="max-width: 300px">
-          Resultado de "One Piece"
-          <q-input  outlined v-model="text" label="Pesquisar mangá..." />
-          <div >
-            <q-btn color="primary"  label="Pesquisar" />
+      <div class="q-pa-md" style="margin-top: 25px;">
+
+        <div class="row" style="display:flex; justify-content: space-between;">
+          <div class="col">
+            <span class="text-h5" style="margin-left: 35px;">Buscar por "Chainsaw man"</span>
+          </div>
+          <div class="col" >
+            <div class="row" style="display: flex; align-items: center; gap: 8px; justify-content: flex-end; padding-right: 99px;">
+              <div>
+              <q-input  outlined v-model="text" label="Pesquisar mangá..." />
+              </div>
+            <div>
+              <q-btn color="primary"  label="Pesquisar" />
+            </div>
+            </div>
           </div>
         </div>
-      </div>
+
+          <div class="row" style="margin-top: 70px; margin-left: 35px;">
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 70px; margin-left: 35px;">
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="card">
+              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <div class="row" style="display:flex; align-items: center">
+                <div class="col">
+                  <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
+                </div>
+                <div class="col">
+                  <h6 style="margin: 10px 0">R$14.90</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </q-page-container>
 
     <q-drawer

@@ -45,10 +45,14 @@
             <q-input ref="passwRef" v-model="password" label="Senha *" outlined :type="password ? 'password' : 'text'" :rules="passwRules" />
             <q-input ref="accPassRef" v-model="acceptPassword" label="Confirmar senha *" outlined :type="password ? 'password' : 'text'" :rules="accPasswRules" />
 
-            <q-toggle v-model="accept" label="I accept the license and terms" />
-
             <div>
-              <q-btn label="Submit" type="submit" color="positive" />
+              <q-btn label="Cadastrar" type="submit" color="positive" style="width:100%"/>
+
+            </div>
+            <q class="ribbon" style="display: block; margin-top:15px;">OU</q>
+            <div>
+              <q-btn font-awesome-icon icon="fa-brands fa-google" label="Entrar com sua conta Google" type="submit"  style="color: black; background-color: #F5F5F5; width:100%;"/>
+
             </div>
           </form>
         </div>
