@@ -14,7 +14,7 @@
           Criar anúncio
         </q-toolbar-title>
         <div>
-          <q-btn flat color="white" label="Entrar/Cadastrar"
+          <q-btn flat color="white" label="Meu perfil"
           size="13px"
           />
         </div>
@@ -29,38 +29,36 @@
     </q-header>
 
     <q-page-container>
-      <div class="q-pa-md">
+      <div class="q-pa-md flex justify-center">
         <div class="text-h4 q-pa-md">
         </div>
-        <div class="column items-center" style="height: 100px; max-height: 50%; width: 1250px;">
-          <div class="col-9">
+        <div class="items-center flex justify-around" style="height: auto; width: 60%;">
+          <div class="">
               Adicionar imagens:
-              <q-file color="red" v-model="imagem" style="background-color: #eee; padding: 100px" accept=".jpg, image/*">
-                <template v-slot:prepend>
-                  <q-icon name="attach_image" />
-                </template>
-              </q-file>
+              <div style="padding: 40px" >
+                  <img src="public/chain.jpg" style="height: 400px; width: 280px" alt="">
+              </div>
               <div style="display: flex; margin-top: 10px; justify-content: space-between;">
-                <q-file color="red" v-model="imagem1" style="background-color: #eee; height: 80px; width: 80px">
+                <q-file color="red" v-model="imagem1" style="background-color: #eee; height: 80px; width: 80px" accept=".jpg, image/*">
                 <template v-slot:prepend>
                 </template>
               </q-file>
-              <q-file color="red" v-model="imagem2" style="background-color: #eee; height: 80px; width: 80px">
+              <q-file color="red" v-model="imagem2" style="background-color: #eee; height: 80px; width: 80px" accept=".jpg, image/*">
                 <template v-slot:prepend>
                 </template>
               </q-file>
-              <q-file color="red" v-model="imagem3" style="background-color: #eee; height: 80px; width: 80px">
+              <q-file color="red" v-model="imagem3" style="background-color: #eee; height: 80px; width: 80px" accept=".jpg, image/*">
                 <template v-slot:prepend>
                 </template>
               </q-file>
-              <q-file color="red" v-model="imagem4" style="background-color: #eee; height: 80px; width: 80px">
+              <q-file color="red" v-model="imagem4" style="background-color: #eee; height: 80px; width: 80px" accept=".jpg, image/*">
                 <template v-slot:prepend>
                 </template>
               </q-file>
               </div>
           </div>
-          <div class="col-5">
-            <div class="q-pa-md col-9" style="max-width: 300px">
+          <div class="">
+            <div class="q-pa-md" style="max-width: 300px">
               Adicionar titulo do anúncio:
               <q-input outlined v-model="titulo" label="Titulo"/>
             </div>
@@ -127,42 +125,27 @@ const linksList = [
   {
     title: 'Início',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '#'
   },
   {
-    title: 'Pedidos',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Criar anúncio',
+    title: 'Criar Anuncio',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '#/manterManga'
   },
   {
-    title: 'Minhas vendas',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Meus produtos',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Carrinho',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Meu perfil',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  },
-  {
-    title: 'Pagamentos',
+    title: 'Carrinho/Pagamento',
     icon: 'receipt',
-    link: 'localhost:9000/#/'
+    link: '#/pagamentos'
+  },
+  {
+    title: 'Meus Pedidos',
+    icon: 'record_voice_over',
+    link: '#/acompanharpedido'
+  },
+  {
+    title: 'Meus Produtos',
+    icon: 'favorite',
+    link: '#/meusProdutos'
   }
 ]
 
