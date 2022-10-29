@@ -12,10 +12,10 @@
         />
 
         <q-toolbar-title class="bg-primary">
-          e-Mangá
+          Busca Produto
         </q-toolbar-title>
         <div>
-          <q-btn flat color="white" label="Entrar/Cadastrar"
+          <q-btn to="/login" flat color="white" label="Entrar/Cadastrar"
           size="13px"
           />
         </div>
@@ -62,7 +62,7 @@
             </div>
 
             <div class="col" id="card">
-              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <img src="public/chainsaw.jpg" style="height: 230px; width: 100%; object-fit: cover;">
               <div class="row" style="display:flex; align-items: center">
                 <div class="col">
                   <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="col" id="card">
-              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <img src="public/chainsaw.jpg" style="height: 230px; width: 100%; object-fit: cover;">
               <div class="row" style="display:flex; align-items: center">
                 <div class="col">
                   <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
@@ -110,7 +110,7 @@
             </div>
 
             <div class="col" id="card">
-              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <img src="public/chainsaw.jpg" style="height: 230px; width: 100%; object-fit: cover;">
               <div class="row" style="display:flex; align-items: center">
                 <div class="col">
                   <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
@@ -136,7 +136,7 @@
 
           <div class="row" style="margin-top: 70px; margin-left: 35px;">
             <div class="col" id="card">
-              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <img src="public/chainsaw.jpg" style="height: 230px; width: 100%; object-fit: cover;">
               <div class="row" style="display:flex; align-items: center">
                 <div class="col">
                   <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
@@ -158,7 +158,7 @@
               </div>
             </div>
             <div class="col" id="card">
-              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <img src="public/chainsaw.jpg" style="height: 230px; width: 100%; object-fit: cover;">
               <div class="row" style="display:flex; align-items: center">
                 <div class="col">
                   <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
@@ -180,7 +180,7 @@
               </div>
             </div>
             <div class="col" id="card">
-              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <img src="public/chainsaw.jpg" style="height: 230px; width: 100%; object-fit: cover;">
               <div class="row" style="display:flex; align-items: center">
                 <div class="col">
                   <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
@@ -202,7 +202,7 @@
               </div>
             </div>
             <div class="col" id="card">
-              <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
+              <img src="public/chainsaw.jpg" style="height: 230px; width: 100%; object-fit: cover;">
               <div class="row" style="display:flex; align-items: center">
                 <div class="col">
                   <q-btn color="primary" label="Ver" style="margin-left: 10px; border-radius:7px"/>
@@ -248,42 +248,27 @@ const linksList = [
   {
     title: 'Início',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '#/buscar'
   },
   {
-    title: 'Pedidos',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Criar anúncio',
+    title: 'Criar Anuncio',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: '#/manterManga'
   },
   {
-    title: 'Minhas vendas',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Meus produtos',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Carrinho',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Meu perfil',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  },
-  {
-    title: 'Pagamentos',
+    title: 'Carrinho/Pagamento',
     icon: 'receipt',
-    link: 'localhost:9000/#/'
+    link: '#/pagamentos'
+  },
+  {
+    title: 'Meus Pedidos',
+    icon: 'record_voice_over',
+    link: '#/acompanharpedido'
+  },
+  {
+    title: 'Meus Produtos',
+    icon: 'favorite',
+    link: '#/meusProdutos'
   }
 ]
 
