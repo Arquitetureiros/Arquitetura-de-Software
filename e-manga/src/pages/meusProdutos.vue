@@ -31,7 +31,7 @@
     <q-page-container>
       <h4 style="text-align: center;">Meus produtos</h4>
       <div class="flex justify-around">
-        <q-card class="my-card" style="width: 40%;">
+        <q-card class="my-card" style="width: 49%;">
           <q-card-section>
             <div class="row justify-between items-stretch">
               <div class="row items-center" style="width: 80%;">
@@ -45,12 +45,12 @@
                 </div>
               </div>
               <div style="width: 20%;" class="flex justify-center items-center">
-                <q-btn color="primary" label="Editar"/>
+                <q-btn to="/manterManga" color="primary" label="Editar"/>
               </div>
             </div>
           </q-card-section>
         </q-card>
-        <q-card class="my-card" style="width: 40%;">
+        <q-card class="my-card" style="width: 49%;">
           <q-card-section>
             <div class="row justify-between items-stretch">
               <div class="row items-center" style="width: 80%;">
@@ -64,7 +64,7 @@
                 </div>
               </div>
               <div style="width: 20%;" class="flex justify-center items-center">
-                <q-btn color="primary" label="Editar"/>
+                <q-btn to="/manterManga" color="primary" label="Editar"/>
               </div>
             </div>
           </q-card-section>
