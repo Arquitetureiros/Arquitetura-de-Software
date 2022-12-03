@@ -30,7 +30,7 @@
     </q-header>
 
     <q-page-container>
-      <div class="q-pa-md" style="margin-top: 25px;">
+      <div class="q-pa-md" style="margin-top: 25px; justify-items: center;">
 
         <div class="row" style="display:flex; justify-content: space-between;">
           <div class="col">
@@ -39,7 +39,7 @@
           <div class="col" >
             <div class="row" style="display: flex; align-items: center; gap: 8px; justify-content: flex-end; padding-right: 99px;">
               <div>
-              <q-input  outlined v-model="text" label="Pesquisar mangá..." />
+              <q-input  outlined v-model="text" style="width: 259px" label="Pesquisar por mangá ou editora" />
               </div>
             <div>
               <q-btn color="primary"  label="Pesquisar" />
@@ -48,6 +48,7 @@
           </div>
         </div>
 
+        <div class="rows-justify-center">
           <div class="row" style="margin-top: 70px; margin-left: 35px;">
             <div class="col" id="card">
               <img src="public/chain.jpg" style="height: 230px; width: 100%; object-fit: cover;">
@@ -212,6 +213,8 @@
                 </div>
               </div>
             </div>
+          </div>
+
           </div>
         </div>
 
